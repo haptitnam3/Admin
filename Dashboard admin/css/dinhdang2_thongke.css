@@ -23,6 +23,10 @@ body{
     background-color: rgb(210, 20, 20);
     text-shadow: 2px 2px 1px black;
 }
+#chi-tiet{
+    color: rgb(210, 20, 20);
+    text-decoration: underline;
+}
 #chuc-nang{
     margin-top: 84px;
     height: 50px;

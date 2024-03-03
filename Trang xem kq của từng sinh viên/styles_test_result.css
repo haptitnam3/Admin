@@ -1,0 +1,142 @@
+/* Test Result */
+
+/* Header */
+#NavMenu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ad171c;
+}
+
+#NavMenu ul li {
+    position: relative;
+}
+
+#NavMenu ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+#NavMenu ul li:nth-child(5) {
+    margin-left: auto;
+    /* Đẩy mục Cá nhân về bên phải */
+}
+
+/* Phần tùy chỉnh icon */
+#NavMenu ul li i {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* End Header */
+
+/* Section One */
+
+.section-one .inner-inform {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.section-one .inner-title {
+    color: var(--color-one);
+    margin-bottom: 10px;
+}
+
+.section-one .inner-head {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-one .inner-head .inner-title {
+    margin: 0;
+}
+
+
+.section-one .inner-button {
+    border: 2px solid var(--color-one);
+    border-radius: 7px;
+    background: white;
+    color: var(--color-one);
+    font-size: 17px;
+    padding: 4px 12px;
+}
+
+.section-one .dropdown-item {
+    display: flex;
+    align-items: center;
+    color: var(--color-one);
+}
+
+.section-one .dropdown-item .inner-download-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.section-one .inner-test {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 100%;
+    height: 90vh;
+    overflow: auto;
+}
+
+.section-one .inner-quest {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.section-one .inner-quest .inner-choices {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.section-one .inner-quest .inner-result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.section-one .inner-quest .inner-sanswer-right {
+    margin-left: 20px;
+    border: 1px solid #00AC33;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.section-one .inner-quest .inner-sanswer-wrong {
+    margin-left: 20px;
+    border: 1px solid #FF0000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* End Section One */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+@media (max-width: 992px) {
+    .section-one .inner-inform {
+        height: auto;
+    }
+}

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Thống kê kết quả</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/styles_statstic.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="Nav-menu" id="NavMenu">
+        <ul>
+            <li><a href="#" class="link active"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+            <li><a href="#" class="link"><i class="fa-regular fa-note-sticky"></i> Bài thi </a></li>
+            <!--KHI MUON TEST DIEN LINK-->
+            <li><a href="#" class="link"><i class="fa-solid fa-book"></i> Ngân hàng</a></li>
+            <li><a href="#" class="link"><i class="fa-solid fa-key"></i> Đáp án</a></li>
+            <li><a href="#" class="link"><i class="fa-solid fa-user"></i> Cá nhân</a></li>
+        </ul>
+    </div>
+    <!-- End Header -->
+
+    <div class="section-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-title">
+                        <h2>Tổng hợp kết quả</h2>
+                    </div>
+                    <div class="inner-search">
+                        <form action="">
+                            <label for="examFilter">Chọn kỳ thi:</label> <br>
+                            <select id="examFilter" onchange="filterResults()">
+                                <option value="">Tất cả</option>
+                                <option value="Luyện tập 1">Luyện tập 1</option>
+                                <option value="Luyện tập 2">Luyện tập 2</option>
+                                <option value="Giữa kỳ">Giữa kỳ</option>
+                                <option value="Cuối kỳ">Cuối kỳ</option>
+                            </select>
+                        </form>
+                        <form action="">
+                            <label for="dateFilter">Chọn thời gian:</label><br>
+                            <input type="date" id="dateFilter" onchange="filterResults()">
+                        </form>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên sinh viên</th>
+                                <th>Kỳ thi</th>
+                                <th>Trạng thái</th>
+                                <th>Thời gian</th>
+                                <th>Điểm số</th>
+                            </tr>
+                        </thead>
+                        <tbody id='resultTable'>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="inner-title" style="margin-bottom: 15px;">Biểu đồ phổ điểm</h2>
+                    <div class="inner-head">
+                        <form action="">
+                            <label for="exam">Kỳ thi:</label>
+                            <select id="exam">
+                                <option value="">Tất cả</option>
+                                <option value="">Luyện tập 1</option>
+                                <option value="">Luyện tập 2</option>
+                                <option value="">Giữa kỳ</option>
+                                <option value="">Cuối kỳ</option>
+                            </select>
+                        </form>
+                        <div class="btn-group">
+                            <button type="button" class="inner-button dropdown" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="inner-icon"><i class="fa-solid fa-download"></i></div>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">
+                                        <div class="inner-download-icon"><i class="fa-solid fa-table"></i>
+                                        </div>
+                                        <div class="inner-download">Xuất tập tin Excel</div>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="inner-download-icon"><i class="fa-regular fa-file-pdf"></i>
+                                        </div>
+                                        <div class="inner-download">Xuất tập tin PDF</div>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tổng số lần tham gia</th>
+                            <th>Tỷ lệ hoàn thành (%)</th>
+                            <th>Điểm trung bình</th>
+                        </tr>
+                    </thead>
+                    <tbody id="summaryTable">
+                    </tbody>
+                </table>
+
+                <canvas id="scoreDistributionChart" width="800" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var examResults = [
+            { student: 'Nguyễn Văn A', exam: 'Luyện tập 1', score: 8.5, status: 'Hoàn thành', time: '18/01/2024 20:35', testResult: true },
+            { student: 'Trần Thị B', exam: 'Luyện tập 1', score: 7.0, status: 'Hoàn thành', time: '18/01/2024 20:27', testResult: true },
+            { student: 'Phạm Văn C', exam: 'Luyện tập 1', score: null, status: 'Chưa hoàn thành', time: null, testResult: null },
+            { student: 'Nguyễn Thị D', exam: 'Luyện tập 2', score: 6.0, status: 'Hoàn thành', time: '01/02/2024 18:51', testResult: true },
+            { student: 'Lê Văn E', exam: 'Giữa kỳ', score: 7.5, status: 'Hoàn thành', time: '16/02/2024 10:55', testResult: true },
+            { student: 'Hoàng Thị F', exam: 'Giữa kỳ', score: null, status: 'Chưa hoàn thành', time: null, testResult: null }
+        ];
+
+        var resultTable = document.getElementById('resultTable');
+
+        function displayResults(results) {
+            resultTable.innerHTML = '';
+
+            var count = 0;
+
+            results.forEach(function (result) {
+                var row = `<tr>
+                                <td>${++count}</td>
+                               <td>${result.student}</td>
+                               <td>${result.exam}</td>
+                               <td>${result.status}</td>
+                               <td>${result.time !== null ? result.time : '---'}</td>
+                               <td>${result.score !== null ? result.score : '---'}</td>
+                           </tr>`;
+                resultTable.innerHTML += row;
+            });
+        }
+
+        function filterResults() {
+            var selectedExam = document.getElementById('examFilter').value;
+            var selectedDate = new Date(document.getElementById('dateFilter').value).toLocaleDateString('vi');
+            var filteredResults = examResults.filter(function (result) {
+                if (result.time != null) {
+                    var dateArr = result.time.slice(0, 10).split('/');
+                    var dateResult = new Date(dateArr[2], dateArr[1] - 1, dateArr[0]).toLocaleDateString('vi');
+                }
+                console.log(selectedExam);
+                return (selectedExam === '' || result.exam === selectedExam) &&
+                    (selectedDate === '' || dateResult === selectedDate);
+            });
+
+            displayResults(filteredResults);
+        }
+
+        displayResults(examResults);
+    </script>
+
+    <script>
+        var summaryData = {
+            totalParticipants: 50,
+            completionRate: 80,
+            averageScore: 7,
+            scoreDistribution: [4, 3, 9, 6, 3, 2]
+        };
+
+        var summaryTable = document.getElementById('summaryTable');
+        summaryTable.innerHTML = `<tr>
+                                    <td>${summaryData.totalParticipants}</td>
+                                    <td>${summaryData.completionRate}</td>
+                                    <td>${summaryData.averageScore}</td>
+                                <tr>`;
+        var ctx = document.getElementById('scoreDistributionChart').getContext('2d');
+        var scoreDistributionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['5', '6', '7', '8', '9', '10'],
+                datasets: [{
+                    label: 'Số lượng',
+                    data: summaryData.scoreDistribution,
+                    backgroundColor: 'rgba(173, 23, 28, 1)',
+                    borderColor: 'rgba(173, 23, 28, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

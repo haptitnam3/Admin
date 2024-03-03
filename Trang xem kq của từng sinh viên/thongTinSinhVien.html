@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Thông tin sinh viên</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./styles_student_result.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header">
+        <div id="ten-he-thong">HỆ THỐNG THI TRẮC NGHIỆM</div>
+    </div>
+        </tr>
+    </table>
+    <div id="khoang-trong"></div>
+    <br />
+    <!-- End Header -->
+
+    <div class="section-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" id="keywords" name="key_words" placeholder="Nhập tên hoặc mã sinh viên" />
+                    <button class="button" onclick="searchStudent()">Tìm kiếm</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="inner-title">Thông tin sinh viên</h2>
+                    <div class="inner-name"><b>Họ và tên:</b> Hoàng Thu Hà</div>
+                    <div class="inner-stuID"><b>Email:</b> haht@gmail.com</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="inner-title">
+                            <h2>Danh sách kỳ thi</h2>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Kỳ thi</th>
+                                    <th>Trạng thái</th>
+                                    <th>Thời gian</th>
+                                    <th>Điểm số</th>
+                                    <th>Kết quả</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Luyện tập 1</th>
+                                    <th>Hoàn thành</th>
+                                    <th>18/01/2024 20:35</th>
+                                    <th>8.5</th>
+                                    <th><a href="./ketquathi.html">Xem</a></th>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <th>Luyện tập 2</th>
+                                    <th>Hoàn thành</th>
+                                    <th>01/02/2024 18:23</th>
+                                    <th>9</th>
+                                    <th><a href="#">Xem</a></th>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <th>Giữa kỳ</th>
+                                    <th>Hoàn thành</th>
+                                    <th>16/02/2024 10:42</th>
+                                    <th>7</th>
+                                    <th><a href="#">Xem</a></th>
+                                </tr>
+                                <tr>
+                                    <th>4</th>
+                                    <th>Cuối kỳ</th>
+                                    <th>Chưa hoàn thành</th>
+                                    <th>27/03/2024 09:00</th>
+                                    <th>---</th>
+                                    <th><a href="#">Xem</a></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function searchStudent() {
+                var input = document.getElementById('keywords').value;
+                var students = [
+                    { id: 'B21DCCNXXX', name: 'Nguyễn Văn A' },
+                    { id: 'B21DCCNAAA', name: 'Hoàng Thị B' },
+                    { id: 'B21DCCNBBB', name: 'Lê Văn C' }
+                ];
+                var resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = ''; // Xóa kết quả trước đó
+                var found = false;
+                students.forEach(function (student) {
+                    if (student.id === input || student.name.toLowerCase().includes(input.toLowerCase())) {
+                        resultDiv.innerHTML += `<p>Mã sinh viên: ${student.id}, Họ và tên: ${student.name}</p>`;
+                        found = true;
+                    }
+                });
+                if (!found) {
+                    resultDiv.innerHTML = '<p>Không tìm thấy sinh viên</p>';
+                }
+            }
+        </script>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

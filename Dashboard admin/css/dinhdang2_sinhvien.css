@@ -33,6 +33,10 @@ body{
     border: none;
     background-color: white;
 }
+#chi-tiet{
+    color: rgb(210, 20, 20);
+    text-decoration: underline;
+}
 a{
     text-decoration: none;
     color: black;

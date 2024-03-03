@@ -1,0 +1,124 @@
+/* Header */
+#NavMenu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ad171c;
+}
+
+#NavMenu ul li {
+    position: relative;
+}
+
+#NavMenu ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+#NavMenu ul li:nth-child(5) {
+    margin-left: auto;
+    /* Đẩy mục Cá nhân về bên phải */
+}
+
+/* Phần tùy chỉnh icon */
+#NavMenu ul li i {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* End Header */
+
+/* Section One */
+.section-one .container {
+    padding: 20px 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #E5E7EB;
+}
+
+tbody th {
+    font-weight: 400;
+}
+
+thead {
+    background: var(--color-one);
+    color: white;
+    font-weight: 600;
+}
+
+.section-one .inner-search {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.section-one .inner-search label {
+    margin: 0;
+}
+
+/* End Section One */
+
+/* Section Two */
+.section-two .container {
+    padding: 20px 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.section-two .inner-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-two thead {
+    background: white;
+    color: var(--color-text);
+}
+
+.section-two .inner-function .btn-group {
+    margin-left: 20px;
+}
+
+.section-two .inner-button {
+    border: 2px solid var(--color-one);
+    border-radius: 7px;
+    background: white;
+    color: var(--color-one);
+    font-size: 17px;
+    padding: 4px 12px;
+}
+
+.section-two .dropdown-item {
+    display: flex;
+    align-items: center;
+    color: var(--color-one);
+}
+
+.section-two .dropdown-item .inner-download-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* End Section Two */
