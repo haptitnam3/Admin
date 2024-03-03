@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh viên</title>
+
+    <link type="text/css" rel="stylesheet" href="../css/dinhdang2_sinhvien.css" />
+</head>
+<body>
+    <div id="header">
+        <div id="ten-he-thong">HỆ THỐNG THI TRẮC NGHIỆM</div>
+    </div>
+    <table id="chuc-nang">
+        <tr>
+            <td>
+                <img id="logo-truong" src="../images/download.jpg" />
+            </td>
+            <td>
+                <div id="ky-thi">
+                    <a href="../html/index.html" onclick="highlightLink(this)">KỲ THI</a>
+                </div>
+            </td>
+            <td>
+                <div id="sinh-vien">
+                    <a href="../html/sinhvien.html" onclick="highlightLink(this)">SINH VIÊN</a>
+                </div> 
+            </td>
+            <td>
+                <div id="thong-ke">
+                    <a href="../html/thongke.html" onclick="highlightLink(this)">THỐNG KÊ</a>
+                </div>
+            </td>
+            <td>
+                <a id="dang-xuat" href="#" onclick="highlightLink(this)">ĐĂNG XUẤT</a>
+            </td>
+        </tr>
+    </table>
+    <div id="khoang-trong"></div>
+    <br />
+    <div id="danh-sach-sinh-vien">DANH SÁCH SINH VIÊN</div>
+    <br />
+    <table id="dong-hai">
+        <tr>
+            <td>
+                <div id="tim-kiem">
+                    Tìm kiếm <input id="input-tim-kiem" type="text" />
+                </div>
+            </td>
+            <td>
+                <div id="them-sinh-vien">
+                    <button id="nut-them">Thêm</button>
+                </div>
+            </td>
+            <td>
+                <div id="sua">
+                    <button id="nut-sua">Sửa</button>
+                </div>
+            </td>
+            <td>
+                <button id="nut-xoa" >Chọn hàng để xóa</button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table id="data">
+        <thead>
+            <tr id="tieu-de">
+                <td id="data-stt">msv</td>
+                <td id="data-ho-ten">họ tên</td>
+                <td id="data-ten-dang-nhap">tên đăng nhập</td>
+                <td id="data-email">email</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- noi dung duoc them vao day -->
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="../javascript/xuly2_sinhvien.js" ></script>
+
+</body>
+</html>

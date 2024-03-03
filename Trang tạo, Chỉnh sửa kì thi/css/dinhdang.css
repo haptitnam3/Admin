@@ -1,0 +1,70 @@
+#anh-nen{
+    background-image: url('../images/hinh-nen-mau-do-5.jpg');
+    background-repeat: unset;
+    width: 100%;
+    height: 900px;
+    position: fixed;
+    z-index: 0;
+    opacity: 0.7;
+} 
+.form{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    width: 90%;
+    height: 100%;
+}
+a:hover{
+    text-decoration: underline;
+}
+input{
+    width: 100%;
+}
+button{
+    background-color: rgb(210, 20, 20);
+    color: white;
+}
+button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#them-de-thi-moi,#danh-sach-cau-hoi{
+    font-size: 20px;
+    font-family: "arial";
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(210, 20, 20);
+}
+#ten-ky-thi, #ten-de-thi, #loai-ky-thi, #mon-hoc, #ma-de, #thoi-gian-lam,#thoi-gian-cho-phep-thi,#thoi-gian-ket-thuc,#diem-toi-da{
+    font-family: "arial";
+}
+#them-ok{
+    line-height: 60px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(210, 20, 20);
+    border: 1px solid black;
+}
+thead{
+    background-color: rgb(210, 20, 20);
+    color: white;
+}
+#data{
+    width: 100%;
+    text-align: center;
+}
+#data td{
+    border: 1px solid black;
+}
+table{
+    background-color: white;
+    border-collapse: collapse;
+}
+#chuc-nang{
+    width: 50%;
+}
+tr.selected {
+    background-color: #ccc; /* Màu xám */
+}

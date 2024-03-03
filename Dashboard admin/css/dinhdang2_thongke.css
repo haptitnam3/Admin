@@ -1,0 +1,85 @@
+#logo-truong{
+    /* background: url('../images/download.jfif') left top no-repeat; */
+    height: 70px;
+    width: 30%;
+}
+*{
+    font-family: Arial;
+}
+body{
+    margin: 5px;
+    height: 900px;
+    background-color: whitesmoke;
+}
+#header{
+    height: 0px;
+}
+#ten-he-thong{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    border: 0.5px black solid;
+    background-color: rgb(210, 20, 20);
+    text-shadow: 2px 2px 1px black;
+}
+#chuc-nang{
+    margin-top: 84px;
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color: white;
+    /* font-family: 'arial';
+    /* font-weight: bolder; */ 
+}
+#ky-thi{
+    /* font-size: 20px; */
+    border: none;
+    background-color: white;
+    font-family: 'arial';
+    /* font-weight: bold; */
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#dang-xuat{
+    border: none;
+    background-color: white;
+}
+#khoang-trong{
+    height: 1px;
+    background-color: rgb(210, 20, 20);
+}
+#bang-de{
+    /* border: 1px solid red; */
+    height: 100%;
+    background-color: white;
+}
+#data{
+    width: 100%;
+    text-align: center;
+}
+#data td{
+    border: 1px solid black;
+}
+table{
+    background-color: white;
+    border-collapse: collapse;
+}
+#tieu-de{
+    text-transform: uppercase;
+}
+thead{
+    background-color: rgb(210, 20, 20);
+    color: white;
+}
+/*dinh dang khi doi tuong duoc chon,re chuot,vân vân... */
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.highlight {
+    color: red;
+    text-decoration: underline;
+}

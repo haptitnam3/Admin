@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang tạo, chỉnh sửa kỳ thi</title>
+
+    <link type="text/css" rel="stylesheet" href="../css/dinhdang.css" />
+</head>
+<body>
+    <div id="anh-nen"></div>
+    <div class="form">
+        <div id="them-de-thi-moi">
+            THÊM ĐỀ THI MỚI
+        </div>
+        <br />
+       
+        <div id="ma-de">ID bài thi</div>
+        <input id="input-ma" type="text" />
+        <br /> <br />
+        
+        <div >Tên kỳ thi</div>
+        <select id="ten-ky-thi">
+            <option>Luyện tập</option>
+            <option>Giữa kỳ</option>
+            <option>Cuối kỳ</option>
+        </select>
+        <br /> <br />
+
+        <div >Loại kỳ thi</div>
+        <select id="loai-ky-thi">
+            <option>Tự do</option>
+            <option>Có yêu cầu thời gian</option>
+        </select>
+        <br /> <br />
+
+        <div id="mon-hoc">Môn học</div>
+        <input id="input-mon" type="text" />
+        <br /> <br />
+
+        <div id="thoi-gian-lam">Thời gian làm bài (phút)</div>
+        <input id="input-tg-lam" type="text" />
+        <br /> <br />
+
+        <div id="thoi-gian-cho-phep-thi">Thời gian cho phép thi</div>
+        <input id="input-tg-cho-phep" type="text" />
+        <br /> <br />
+
+        <div id="thoi-gian-ket-thuc">Thời gian kết thúc</div>
+        <input id="input-tg-ket-thuc" type="text" />
+        <br /> <br />
+
+        <div id="danh-sach-cau-hoi">Danh sách câu hỏi</div>
+        <br />
+        <table id="chuc-nang">
+            <tr>
+                <td>
+                    <button id="them-cau-hoi">Thêm câu hỏi</button>
+                </td>
+                <td>
+                    <button id="xoa-cau-hoi">Chọn để xóa</button>
+                </td>
+                <td>
+                    <button id="sua-cau-hoi">Sửa</button>
+                </td>
+                <td>
+                    <input type="file" />
+                </td>
+            </tr>
+        </table>
+
+        <br />
+        <table id="data">
+            <thead>
+                <tr>
+                    <td id="ID">ID</td>
+                    <td id="cau-hoi">Câu hỏi</td>
+                    <td id="A">A</td>
+                    <td id="B">B</td>
+                    <td id="C">C</td>
+                    <td id="D">D</td>
+                    <td id="dung">Đáp án đúng</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br />
+        <a id="them-ok" href="C:\Users\Admin\OneDrive\Tài liệu\Lap trinh web\BT nhóm web\Admin\Dashboard admin\html\index.html">Lưu đề thi</a>
+    </div>
+
+    <script type="text/javascript" src="../javascript/xuly.js"></script>
+</body>
+</html>

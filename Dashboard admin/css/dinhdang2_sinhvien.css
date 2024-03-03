@@ -1,0 +1,107 @@
+#logo-truong{
+    /* background: url('../images/download.jfif') left top no-repeat; */
+    height: 70px;
+    width: 30%;
+}
+*{
+    font-family: Arial;
+}
+body{
+    margin: 5px;
+    height: 900px;
+    background-color: whitesmoke;
+}
+#header{
+    height: 0px;
+}
+#ten-he-thong{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    border: 0.5px black solid;
+    background-color: rgb(210, 20, 20);
+    text-shadow: 2px 2px 1px black;
+}
+#chuc-nang{
+    margin-top: 84px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+#ky-thi{
+    border: none;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#dang-xuat{
+    border: none;
+    background-color: white;
+}
+#danh-sach-sinh-vien{
+    color: rgb(210, 20, 20);
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 0px 1px wheat;
+    text-indent: 10px;
+
+    background-color: white;
+    line-height: 40px;
+    width: 100%;
+}
+#nut-them,#nut-sua,#nut-xoa{
+    color: white;
+    border-radius: 5px;
+}
+#dong-hai{
+    background-color: white;
+    width: 100%;
+    /* border-collapse: collapse; */
+}
+#khoang-trong{
+    height: 1px;
+    background-color: rgb(210, 20, 20);
+}
+#input-tim-kiem{
+    width: 80%;
+}
+#data{
+    width: 100%;
+    text-align: center;
+}
+#data td{
+    border: 1px solid black;
+}
+table{
+    background-color: white;
+    border-collapse: collapse;
+}
+#tieu-de{
+    text-transform: uppercase;
+}
+button{
+    border: 1px solid black;
+    background-color: rgb(210, 20, 20);
+}
+thead{
+    background-color: rgb(210, 20, 20);
+    color: white;
+}
+/*dinh dang khi doi tuong duoc chon,re chuot,vân vân... */
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
+tr.selected {
+    background-color: #ccc; /* Màu xám */
+}
+button{
+    cursor: pointer;
+}
+.highlight {
+    color: red;
+    text-decoration: underline;
+}

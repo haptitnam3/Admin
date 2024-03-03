@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê</title>
+
+    <link type="text/css" rel="stylesheet" href="../css/dinhdang2_thongke.css" />
+</head>
+<body>
+    <div id="header">
+        <div id="ten-he-thong">HỆ THỐNG THI TRẮC NGHIỆM</div>
+    </div>
+    <table id="chuc-nang">
+        <tr>
+            <td>
+                <img id="logo-truong" src="../images/download.jpg" />
+            </td>
+            <td>
+                <div id="ky-thi">
+                    <a href="../html/index.html" onclick="highlightLink(this)">KỲ THI</a>
+                </div>
+            </td>
+            <td>
+                <div id="sinh-vien">
+                    <a href="../html/sinhvien.html" onclick="highlightLink(this)">SINH VIÊN</a>
+                </div> 
+            </td>
+            <td>
+                <div id="thong-ke" onclick="highlightLink(this)">
+                    <a href="../html/thongke.html">THỐNG KÊ</a>
+                </div>
+            </td>
+            <td>
+                <a id="dang-xuat" href="#" onclick="highlightLink(this)">ĐĂNG XUẤT</a>
+            </td>
+        </tr>
+    </table>
+    <div id="khoang-trong"></div>
+    <br />
+    <!-- Còn nút thêm, sửa tại kỳ thi -->
+    <table id="data">
+        <thead>
+            <tr id="tieu-de">
+                <td id="id">ID</td>
+                <td id="ten-ky-thi" >Tên kỳ thi</td>
+                <td id="So-nguoi-tham-giam">Số thí sinh tham gia</td>
+                <td id="ty-le-hoan-thanh">Tỷ lệ hoàn thành (%)</td>
+                <td id="diem-trung-binh">Điểm trung bình</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="../javascript/xuly3_thongke.js"></script>
+
+</body>
+</html>
