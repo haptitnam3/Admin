@@ -16,7 +16,8 @@ function highlightLink(element) {
 
 const tableDataList = [
     new bang("SV0001","Nguyễn Thế Quyết","quyetnt","quyetnt@gmail.com"),
-    new bang("SV0002","Hoàng Thu Hà","haht","haht@gmail.com")
+    new bang("SV0002","Hoàng Anh Hương","huonght","haht@gmail.com"),
+    new bang("B21DCCNXXX","Nguyễn Văn A","ant","ant@gmail.com")
 ];
 
 function input(){
