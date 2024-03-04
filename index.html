@@ -2,95 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin</title>
-
-    <link type="text/css" rel="stylesheet" href="./Dashboard admin/css/dinhdang1.css" />
-    <!-- <script type="text/javascript" src="./Dashboard admin/javascript/xuly1.js"></script> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./Trang đăng nhập admin/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Đăng nhập admin</title>
 </head>
 <body>
-    <div id="header">
-        <div id="ten-he-thong">HỆ THỐNG THI TRẮC NGHIỆM</div>
+ <div class="wrapper" id="loginAdmin">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>PTIT</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active"><i class="fa-solid fa-house"></i>Kỳ thi</a></li>
+                <li><a href="#" class="link">Sinh viên</a></li>
+                <li><a href="#" class="link">Thống kê</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Đăng nhập</button>
+            <button class="btn" id="registerBtn" onclick="register()">Đăng xuất</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Bạn chưa có tài khoản? <a href="#" onclick="register()">Đăng ký</a></span>
+                <header>Đăng nhập</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Họ tên hoặc Email" id="adminUsername" required>
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Mật khẩu" id="adminPassword" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Đăng nhập" onclick="Login()">
+                <a href="index.html"></a>
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Ghi nhớ</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Quên mật khẩu?</a></label>
+                </div>
+            </div>
+        </div>
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Bạn có tài khoản? <a href="#" onclick="register()">Đăng nhập</a></span>
+                <header>Đăng ký</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Họ và tên">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Mật khẩu"">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Nhập lại mật khẩu">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Đăng ký" onclick="Login()">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Ghi nhớ</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Điều khoản và điều kiện</a></label>
+                </div>
+            </div>
+        </div>
     </div>
-    <table id="chuc-nang">
-        <tr>
-            <td>
-                <img id="logo-truong" src="./Dashboard admin/images/download.jpg" />
-            </td>
-            <td>
-                <div id="ky-thi">
-                    <a href="index.html" onclick="highlightLink(this)">KỲ THI</a>
-                </div>
-            </td>
-            <td>
-                <div id="sinh-vien">
-                    <a href="./Dashboard admin/html/sinhvien.html" onclick="highlightLink(this)">SINH VIÊN</a>
-                </div> 
-            </td>
-            <td>
-                <div id="thong-ke">
-                    <a href="./Dashboard admin/html/thongke.html" onclick="highlightLink(this)">THỐNG KÊ</a>
-                </div>
-            </td>
-            <td>
-                <a id="dang-xuat" href="#" onclick="highlightLink(this)">ĐĂNG XUẤT</a>
-            </td>
-        </tr>
-    </table>
-    <div id="khoang-trong"></div>
-    <br />
-    <div id="danh-sach-de-thi">DANH SÁCH ĐỀ THI</div>
-    <br />
-    <table id="dong-hai">
-        <tr>
-            <td>
-                <select id="chon-ky-thi">
-                    <option >Chọn</option>
-                    <option id="luyen-tap">Luyện tập</option>
-                    <option id="giua-ki">Giữa kỳ</option>
-                    <option id="cuoi-ki">Cuối kỳ</option>
-                </select>
-            </td>
-            <td>
-                <div id="tim-kiem">
-                    Tìm kiếm <input id="input-tim-kiem" type="text" />
-                </div>
-            </td>
-            <td>
-                <div id="tao-moi">
-                    <a id="nut-tao-moi" href="./Trang tạo, Chỉnh sửa kì thi/html/taomoikythi.html">+ Tạo mới</a>
-                </div>
-            </td>
-            <td>
-                <div id="sua">
-                    <button id="nut-sua">Sửa</button>
-                </div>
-            </td>
-            <td>
-                <button id="nut-xoa" >Chọn hàng để xóa</button>
-            </td>
-        </tr>
-    </table>
-    <br />
-    <table id="data">
-        <thead>
-            <tr id="tieu-de">
-                <td id="id">ID</td>
-                <td id="data-ky-thi">Tên kỳ thi</td>
-                <td id="data-mon-hoc">Môn học</td>
-                <td id="data-thoi-gian">Thời gian làm bài</td>
-                <td id="data-thoi-gian-bat-dau">Bắt đầu</td>
-                <td id="data-thoi-gian-ket-thuc">Kết thúc</td>
-                <td id="data-loai">Phân loại</td>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- noi dung them -->
-        </tbody>
-    </table>
+</div>   
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+</script>
+<script>
+    // JavaScript để thực hiện các chức năng tương tác
+    function Login() {
+        // Xử lý đăng nhập ở đây
+        // Sau khi đăng nhập thành công, ẩn form đăng nhập và hiển thị trang chính
+        var username = document.getElementById("adminUsername").value;
+        var password = document.getElementById("adminPassword").value;
 
-    <script type="text/javascript" src="./Dashboard admin/javascript/xuly1.js"></script>
+        // Add your authentication logic here
+        // Example: Check if username and password match admin credentials
+        if (username === "admin" && password === "admin123") {
+            window.location.href = "./Dashboard admin/html/kythi.html"; // Redirect to admin dashboard
+        } else {
+            alert("Invalid admin credentials. Please try again.");
+        }
+
+        // Gọi hàm để tải và hiển thị danh sách kỳ thi
+    }
+</script>
+
 
 </body>
 </html>

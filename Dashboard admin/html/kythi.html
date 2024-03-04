@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinh viên</title>
+    <title>Dashboard Admin</title>
 
-    <link type="text/css" rel="stylesheet" href="../css/dinhdang2_sinhvien.css" />
+    <link type="text/css" rel="stylesheet" href="../css/dinhdang1.css" />
+    <!-- <script type="text/javascript" src="./Dashboard admin/javascript/xuly1.js"></script> -->
 </head>
 <body>
     <div id="header">
@@ -19,17 +20,17 @@
             </td>
             <td>
                 <div id="ky-thi">
-                    <a href="./kythi.html" onclick="highlightLink(this)">KỲ THI</a>
+                    <a href="kythi.html" onclick="highlightLink(this)">KỲ THI</a>
                 </div>
             </td>
             <td>
                 <div id="sinh-vien">
-                    <a href="./sinhvien.html" onclick="highlightLink(this)">SINH VIÊN</a>
+                    <a href="sinhvien.html" onclick="highlightLink(this)">SINH VIÊN</a>
                 </div> 
             </td>
             <td>
                 <div id="thong-ke">
-                    <a href="./thongke.html" onclick="highlightLink(this)">THỐNG KÊ</a>
+                    <a href="thongke.html" onclick="highlightLink(this)">THỐNG KÊ</a>
                 </div>
             </td>
             <td>
@@ -39,18 +40,26 @@
     </table>
     <div id="khoang-trong"></div>
     <br />
-    <div id="danh-sach-sinh-vien">DANH SÁCH SINH VIÊN</div>
+    <div id="danh-sach-de-thi">DANH SÁCH ĐỀ THI</div>
     <br />
     <table id="dong-hai">
         <tr>
+            <td>
+                <select id="chon-ky-thi">
+                    <option >Chọn</option>
+                    <option id="luyen-tap">Luyện tập</option>
+                    <option id="giua-ki">Giữa kỳ</option>
+                    <option id="cuoi-ki">Cuối kỳ</option>
+                </select>
+            </td>
             <td>
                 <div id="tim-kiem">
                     Tìm kiếm <input id="input-tim-kiem" type="text" />
                 </div>
             </td>
             <td>
-                <div id="them-sinh-vien">
-                    <button id="nut-them">Thêm</button>
+                <div id="tao-moi">
+                    <a id="nut-tao-moi" href="../../Trang tạo, Chỉnh sửa kì thi/html/taomoikythi.html">+ Tạo mới</a>
                 </div>
             </td>
             <td>
@@ -61,27 +70,27 @@
             <td>
                 <button id="nut-xoa" >Chọn hàng để xóa</button>
             </td>
-            <td>
-                <a id="chi-tiet" href="../../Trang xem kq của từng sinh viên/thongTinSinhVien.html">Nhấn để xem chi tiết</a>
-            </td>
         </tr>
     </table>
     <br />
     <table id="data">
         <thead>
             <tr id="tieu-de">
-                <td id="data-stt">msv</td>
-                <td id="data-ho-ten">họ tên</td>
-                <td id="data-ten-dang-nhap">tên đăng nhập</td>
-                <td id="data-email">email</td>
+                <td id="id">ID</td>
+                <td id="data-ky-thi">Tên kỳ thi</td>
+                <td id="data-mon-hoc">Môn học</td>
+                <td id="data-thoi-gian">Thời gian làm bài</td>
+                <td id="data-thoi-gian-bat-dau">Bắt đầu</td>
+                <td id="data-thoi-gian-ket-thuc">Kết thúc</td>
+                <td id="data-loai">Phân loại</td>
             </tr>
         </thead>
         <tbody>
-            <!-- noi dung duoc them vao day -->
+            <!-- noi dung them -->
         </tbody>
     </table>
 
-    <script type="text/javascript" src="../javascript/xuly2_sinhvien.js" ></script>
+    <script type="text/javascript" src="../javascript/xuly1.js"></script>
 
 </body>
 </html>

@@ -21,7 +21,7 @@ input{
     width: 100%;
 }
 button{
-    background-color: rgb(210, 20, 20);
+    background-color: #AD171C;
     color: white;
 }
 button:hover{
@@ -33,7 +33,7 @@ button:hover{
     font-family: "arial";
     font-weight: bold;
     text-decoration: underline;
-    color: rgb(210, 20, 20);
+    color: #AD171C;
 }
 #ten-ky-thi, #ten-de-thi, #loai-ky-thi, #mon-hoc, #ma-de, #thoi-gian-lam,#thoi-gian-cho-phep-thi,#thoi-gian-ket-thuc,#diem-toi-da{
     font-family: "arial";
@@ -44,11 +44,11 @@ button:hover{
 a{
     text-decoration: none;
     color: white;
-    background-color: rgb(210, 20, 20);
+    background-color: #AD171C;
     border: 1px solid black;
 }
 thead{
-    background-color: rgb(210, 20, 20);
+    background-color:#AD171C;
     color: white;
 }
 #data{

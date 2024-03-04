@@ -20,7 +20,7 @@ body{
     font-size: 30px;
     line-height: 80px;
     border: 0.5px black solid;
-    background-color: rgb(210, 20, 20);
+    background-color: #AD171C;
     text-shadow: 2px 2px 1px black;
 }
 #chuc-nang{
@@ -34,7 +34,7 @@ body{
     background-color: white;
 }
 #chi-tiet{
-    color: rgb(210, 20, 20);
+    color: #AD171C;
     text-decoration: underline;
 }
 a{
@@ -46,7 +46,7 @@ a{
     background-color: white;
 }
 #danh-sach-sinh-vien{
-    color: rgb(210, 20, 20);
+    color: #AD171C;
     font-weight: bold;
     font-size: 20px;
     text-shadow: 1px 0px 1px wheat;
@@ -67,7 +67,7 @@ a{
 }
 #khoang-trong{
     height: 1px;
-    background-color: rgb(210, 20, 20);
+    background-color: #AD171C;
 }
 #input-tim-kiem{
     width: 80%;
@@ -88,10 +88,10 @@ table{
 }
 button{
     border: 1px solid black;
-    background-color: rgb(210, 20, 20);
+    background-color: #AD171C;
 }
 thead{
-    background-color: rgb(210, 20, 20);
+    background-color: #AD171C;
     color: white;
 }
 /*dinh dang khi doi tuong duoc chon,re chuot,vân vân... */
